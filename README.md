@@ -22,7 +22,7 @@ The assessment is structured into three main components:
 ├── test-cases/
 │   └── Gmail_Compose_Test_Cases.xlsx # Main Excel deliverable
 └── features/
-    └── gmail_compose.feature # BDD Gherkin scenarios
+    └── Gmail_Compose.Feature # BDD Gherkin scenarios
 ```
 
 ## Scenarios Covered
