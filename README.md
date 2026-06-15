@@ -36,9 +36,9 @@ b. Invalid Recipient Format: Testing the system's resilience against improperly 
 1. Excel Sheet: Navigate to the /test-cases/ folder and download Gmail_Compose_Test_Cases.xlsx. This contains the full traceability matrix.
 2. BDD Scenarios: Open /features/gmail_compose.feature to see how the requirements translate into behavioral scenarios suitable for automation.
 
-👤 Author
-Name: Annupriya Singh
-Role: QA Engineering Candidate
-Submission Date: June 15, 2026
+## Author
+Name: Annupriya Singh<br>
+Role: QA Engineering Candidate<br>
+Submission Date: June 15, 2026<br>
 
 Prepared for the Incubyte QA Assessment.
