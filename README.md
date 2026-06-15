@@ -16,12 +16,14 @@ The assessment is structured into three main components:
 3. Excel Documentation: A formatted spreadsheet containing both positive and negative test scenarios.
 
 ## Repository Structure
-.<br>
-├── README.md                                # Project documentation <br>
-├── test-cases/<br>
-│   └── Gmail_Compose_Test_Cases.xlsx        # Main Excel deliverable <br>
-└── features/<br>
-    └── gmail_compose.feature               # BDD Gherkin scenarios <br>
+```text
+.
+├── README.md # Project documentation
+├── test-cases/
+│   └── Gmail_Compose_Test_Cases.xlsx # Main Excel deliverable
+└── features/
+    └── gmail_compose.feature # BDD Gherkin scenarios
+```
 
 ## Scenarios Covered
 1. Positive Testing<br>
