@@ -1,0 +1,42 @@
+Feature: Gmail Compose Functionality
+  As a QA Engineer
+  I want to verify the Gmail compose and send functions
+  So that I can ensure accurate email delivery for Incubyte specifications
+
+  @Positive @Smoke
+  Scenario: Successfully sending an email with specific Incubyte test data
+    Given the user is logged into Gmail and has the Compose window open
+    When the user enters a valid recipient email address in the "To" field
+    And the user enters "Incubyte" in the Subject line
+    And the user enters "QA test for Incubyte" in the email body
+    And the user clicks the "Send" button
+    Then the email should be sent successfully
+    And a confirmation message saying "Message sent" should be displayed
+    And the email should appear correctly in the "Sent" folder
+
+  @Negative
+  Scenario: Attempting to send the specific email without a recipient
+    Given the user is logged into Gmail and has the Compose window open
+    When the user leaves the "To" field empty
+    And the user enters "Incubyte" in the Subject line
+    And the user enters "QA test for Incubyte" in the email body
+    And the user clicks the "Send" button
+    Then the email should not be sent
+    And an error dialog should appear stating "Please specify at least one recipient"
+
+  @Negative
+  Scenario: Attempting to send the specific email to an invalid email address
+    Given the user is logged into Gmail and has the Compose window open
+    When the user enters "incubyte_invalid_email" in the "To" field
+    And the user enters "Incubyte" in the Subject line
+    And the user enters "QA test for Incubyte" in the email body
+    And the user clicks the "Send" button
+    Then the application should block the submission or display a "Please correct the email format" warning
+
+  @Positive
+  Scenario: Verifying auto-save behavior for the Incubyte test draft
+    Given the user is logged into Gmail and has the Compose window open
+    When the user populates the fields with recipient, subject "Incubyte", and body "QA test for Incubyte"
+    And the user closes the compose dialog without clicking send
+    Then the system should save the message to the "Drafts" folder automatically
+    And a toast notification saying "Draft saved" should appear
